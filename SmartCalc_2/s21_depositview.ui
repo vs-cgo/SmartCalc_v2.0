@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DepositView</class>
+ <widget class="QDialog" name="DepositView">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayoutView" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="line_a">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(255, 255, 255);
+    background-color: rgb(225, 116, 104);
+    border: 2px solid rgb(55, 55, 55);
+	border-top: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QPushButton" name="add">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>+ Добавить пополнение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="1">
+    <widget class="QPushButton" name="calc">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Рассчитать</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_freq">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Периодичность выплат</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QComboBox" name="box_freq">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>каждый день</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>каждую неделю</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>раз в месяц</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>раз в квартал</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>раз в полгода</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>раз в год</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>в конце срока</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="label_tax_p">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>% годовых</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="line_te">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(225, 116, 104);
+	border: 2px solid rgb(55, 55, 55);
+	border-top: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="line_r">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(255, 255, 255);
+    background-color: rgb(225, 116, 104);
+    border: 2px solid rgb(55, 55, 55);
+	border-top: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QCheckBox" name="box_cap">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Капитализация процентов</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_term">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Срок размещения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_tax">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Налоговая ставка</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="line_term">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border: 2px solid rgb(55, 55, 55);
+	border-bottom: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Срок кредита</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="17" column="0" colspan="4">
+    <widget class="QTableWidget" name="table_tax">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>180</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget  {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(60, 59, 60);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(55, 55, 55);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_rate">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Процентная ставка</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0" colspan="4">
+    <widget class="QTableWidget" name="table_pay">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget  {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(60, 59, 60);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(55, 55, 55);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="line_ta">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(255, 255, 255);
+    background-color: rgb(225, 116, 104);
+    border: 2px solid rgb(55, 55, 55);
+	border-top: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="line_amount">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(55, 55, 55);
+	border-bottom: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Сумма кредита</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="line_rate">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(55, 55, 55);
+	border-bottom: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Процентная ставка</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_amount">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Сумма вклада</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QComboBox" name="box_term">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>дней</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>месяцев</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>лет</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="13" column="1" colspan="3">
+    <widget class="QScrollArea" name="scroll_drawal">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <widget class="QWidget" name="sawc_drawal">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>365</width>
+        <height>0</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QPushButton" name="drawal">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>+ Добавить снятие</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="label_rate_p">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>% годовых</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="line_tax">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	font: 13pt &quot;Times New Roman&quot;;
+	color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(55, 55, 55);
+	border-bottom: 0px solid rgb(55, 55, 55);
+}</string>
+     </property>
+     <property name="text">
+      <string>13</string>
+     </property>
+     <property name="placeholderText">
+      <string>Налоговая ставка</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1" colspan="3">
+    <widget class="QScrollArea" name="scroll_add">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <widget class="QWidget" name="sawc_add">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>365</width>
+        <height>0</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_1">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Пополнения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Частичные снятия</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_1copy">
+     <property name="text">
+      <string>Пополнения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="label_2copy">
+     <property name="text">
+      <string>Частичные снятия</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
